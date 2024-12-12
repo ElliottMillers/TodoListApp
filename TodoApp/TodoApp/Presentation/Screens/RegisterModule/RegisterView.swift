@@ -21,9 +21,16 @@ struct RegisterView: View {
                     .textFieldStyle(DefaultTextFieldStyle())
                 TextField("Email Adress", text: $mail)
                     .textFieldStyle(DefaultTextFieldStyle())
+                    .autocorrectionDisabled(true)
+                    .textInputAutocapitalization(.none)
                 SecureField("Password", text: $password)
                     .textFieldStyle(DefaultTextFieldStyle())
+                CustomButtonView(title: "Create an Account", backgroundColor: .blue) {
+                    // atmp to log in
+                }
             }
+            .offset(y: -50)
+            
         }
     }
 }
